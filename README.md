@@ -90,11 +90,11 @@ docker compose up --build
 
 | Servicio | URL |
 |---|---|
-| Frontend | http://localhost:4200 |
-| API + Swagger (docs) | http://localhost:5000/swagger |
-| Mailpit (emails) | http://localhost:8025 |
+| Frontend | http://localhost:4200 | Interfaz principal de la aplicación |
+| API + Swagger | http://localhost:5000/swagger | Documentación interactiva de los endpoints |
+| Mailpit | http://localhost:8025 | Bandeja de entrada de los emails enviados |
 
-> Importante: los emails enviados por la aplicación son capturados por Mailpit y nunca llegan a ningún destinatario real.
+> ⚠️ Mailpit actúa como una bandeja de entrada falsa. Los emails que genera la aplicación **no se envían a nadie**, solo aparecen en `localhost:8025` para poder revisarlos durante el desarrollo.
 
 ---
 

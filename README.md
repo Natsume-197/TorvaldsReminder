@@ -4,7 +4,7 @@
 
 Demostración sistema de recordatorio de facturas vencidas construido con **.NET 10**, **MongoDB** y **Angular**.
 
-# ¿Qué hace?
+## ¿Qué hace?
 
 Al ejecutar el proceso de recordatorio, el sistema revisa cada factura pendiente y aplica la siguiente transición:
 
@@ -54,7 +54,7 @@ Este proyecto se encuentra aislado en una instancia de Docker para evitar confli
 
 ```bash
 # 1. Clonar el repositorio
-git clone 
+git clone https://github.com/Natsume-197/TorvaldsReminder
 cd TorvaldsReminder
 
 # 2. Crear el archivo de entorno

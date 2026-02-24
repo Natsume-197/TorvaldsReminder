@@ -4,6 +4,11 @@
 
 Demostración sistema de recordatorio de facturas vencidas construido con **.NET 10**, **MongoDB** y **Angular**.
 
+<img width="2560" height="1294" alt="image" src="https://github.com/user-attachments/assets/730a9892-5d28-4cbe-9281-0293a11ec400" />
+<img width="2560" height="1294" alt="image" src="https://github.com/user-attachments/assets/610b8790-855c-4632-a956-d3644f8af169" />
+<img width="2560" height="1294" alt="image" src="https://github.com/user-attachments/assets/2158b473-52a5-462d-9a78-2fa8f96fb1c7" />
+
+
 ## ¿Qué hace?
 
 Al ejecutar el proceso de recordatorio, el sistema revisa cada factura pendiente y aplica la siguiente transición:

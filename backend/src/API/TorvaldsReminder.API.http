@@ -1,0 +1,6 @@
+@TorvaldsReminder.API_HostAddress = http://localhost:5140
+
+GET {{TorvaldsReminder.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="src/API/TorvaldsReminder.API.csproj" />
+  <Project Path="src/Application/TorvaldsReminder.Application.csproj" />
+  <Project Path="src/Domain/TorvaldsReminder.Domain.csproj" />
+  <Project Path="src/Infrastructure/TorvaldsReminder.Infrastructure.csproj" />
+  <Project Path="tests/UnitTests/TorvaldsReminder.Tests.csproj" />
+</Solution>

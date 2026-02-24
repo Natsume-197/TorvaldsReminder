@@ -1,0 +1,62 @@
+<div class="container">
+  <header>
+    <h1>Torvalds Reminder</h1>
+    <p class="subtitle">Sistema de recordatorios</p>
+  </header>
+
+  <main>
+    <div class="actions">
+      <button (click)="process()" [disabled]="isProcessing()" class="btn-primary">
+        @if (isProcessing()) {
+          <span class="spinner"></span> Procesando...
+        } @else {
+          Ejecutar Proceso de Recordatorios
+        }
+      </button>
+      <button (click)="reloadData()" class="btn-secondary">Actualizar</button>
+      <button (click)="resetData()" class="btn-secondary">Reiniciar data</button>
+    </div>
+
+    @if (message()) {
+      <div class="alert" [class.alert-info]="!isProcessing()">
+        {{ message() }}
+      </div>
+    }
+
+    <section class="invoice-summary">
+      <h2>Resumen de Facturas</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Factura</th>
+              <th>Cliente</th>
+              <th>Monto</th>
+              <th>Vencimiento</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (inv of displayInvoices(); track inv.id) {
+              <tr>
+                <td><strong>{{ inv.number }}</strong></td>
+                <td>{{ inv.clientName }}</td>
+                <td>{{ inv.amount | currency:'COP':'symbol-narrow':'1.0-0' }}</td>
+                <td>{{ inv.dueDate | date:'dd/MM/yyyy' }}</td>
+                <td>
+                  <span class="badge" [ngClass]="getStatusClass(inv.status)">
+                    {{ getInvoiceStatusName(inv.status) }}
+                  </span>
+                </td>
+              </tr>
+            } @empty {
+              <tr>
+                <td colspan="5" class="text-center">No hay facturas cargadas.</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
